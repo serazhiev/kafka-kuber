@@ -19,7 +19,6 @@ RUN set -x \
     && tar -xzf "$KAFKA_DIST.tgz" -C /opt \
     && rm -r "$GNUPGHOME" "$KAFKA_DIST.tgz" "$KAFKA_DIST.tgz.asc"
     
-COPY log4j.properties /opt/$KAFKA_DIST/config/
 
 RUN set -x \
     && ln -s /opt/$KAFKA_DIST $KAFKA_HOME \
